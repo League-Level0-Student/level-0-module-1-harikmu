@@ -20,16 +20,28 @@
 
 	/*  Make the Robot move around the screen when the arrow keys are pressed... */
 	private void moveRobot(int keyPressed) {
-	    // 0. Print out the keyPressed variable and write down the numbers for each arrow key
-
+	    // 0. Print out the keyPressed variable and write down the numbers for each arrow key up-38 left-37 down-40 right-39
+		System.out.println(keyPressed);
 	    // 1. If the up arrow is pressed, move the Robot up the screen.
-
+		if (keyPressed == 38) {
+			rob.setAngle(0);
+			rob.move(10);
+		}
 	    // 2. If the down arrow is pressed, move the Robot down.
-
+		if(keyPressed == 40) {
+				rob.setAngle(0);
+				rob.move(-10);
+		}
 	    // 3. If the left arrow is pressed, make the Robot go left. Hint: Make sure to end with the Robot facing UP.
-	    
+		if(keyPressed == 37) {
+			rob.setAngle(-90);
+			rob.move(10);
+	}
 	    // 4. If right is pressed, move the Robot right.
-	    
+		if(keyPressed == 39) {
+			rob.setAngle(90);
+			rob.move(10);
+	}
 	    // 5. Then move the Robot to RD-2D for a surprise! 
 	}
 
